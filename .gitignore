@@ -9,6 +9,7 @@ Makefile
 /main
 /se_test
 /fhe_test
+/stress_se
 
 # Object files
 *.o
@@ -33,3 +34,7 @@ compile_commands.json
 # Backup files
 *~
 *.bak
+
+# Doxygen docs
+/docs/
+Doxyfile
