@@ -14,13 +14,27 @@ find_path(ARGON2_INCLUDE_DIR
         ${PROJECT_SOURCE_DIR}/phc-winner-argon2/include
         ${PROJECT_SOURCE_DIR}/phc-winner-argon2/src
 )
-find_library(ARGON2_LIBRARY
-    NAMES libargon2.so.1 libargon2.so argon2
+find_file(ARGON2_LIBRARY_SO
+    NAMES libargon2.so.1
     HINTS
         ${PROJECT_SOURCE_DIR}/phc-winner-argon2
         ${PROJECT_SOURCE_DIR}/phc-winner-argon2/lib
         ${PROJECT_SOURCE_DIR}/phc-winner-argon2/build
 )
+
+find_library(ARGON2_LIBRARY_DEFAULT
+    NAMES argon2
+    HINTS
+        ${PROJECT_SOURCE_DIR}/phc-winner-argon2
+        ${PROJECT_SOURCE_DIR}/phc-winner-argon2/lib
+        ${PROJECT_SOURCE_DIR}/phc-winner-argon2/build
+)
+
+if (ARGON2_LIBRARY_SO)
+    set(ARGON2_LIBRARY ${ARGON2_LIBRARY_SO})
+elseif(ARGON2_LIBRARY_DEFAULT)
+    set(ARGON2_LIBRARY ${ARGON2_LIBRARY_DEFAULT})
+endif()
 
 if (ARGON2_INCLUDE_DIR AND ARGON2_LIBRARY)
     if (ARGON2_LIBRARY MATCHES "\\.a$")
