@@ -1,5 +1,5 @@
-#include "SE.h"
-#include "KeyManager.h"
+#include "SE.hpp"
+#include "KeyManager.hpp"
 #include <vector>
 
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t *data, size_t size)

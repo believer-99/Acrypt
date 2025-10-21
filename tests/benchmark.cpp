@@ -1,6 +1,6 @@
 #include <chrono>
 #include <iostream>
-#include "SE.h"
+#include "SE.hpp"
 #include "FHE/FHE_utils.hpp"
 
 void benchmark_se()
@@ -29,6 +29,5 @@ void benchmark_se()
 int main()
 {
     benchmark_se();
-    // Add FHE benchmarks similarly
     return 0;
 }

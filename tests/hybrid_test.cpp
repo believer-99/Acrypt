@@ -4,10 +4,10 @@
 #include <map>
 #include <stdexcept>
 #include <algorithm>
-#include "AES.h"
-#include "SE.h"
+#include "AES.hpp"
+#include "SE.hpp"
 #include "FHE/FHE_utils.hpp"
-#include "KeyManager.h"
+#include "KeyManager.hpp"
 
 void assert_hybrid_true(bool condition, const std::string &test_name)
 {

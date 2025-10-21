@@ -1,5 +1,5 @@
-#include "SE.h"
-#include "utils/String_utils.h"
+#include "SE.hpp"
+#include "utils/String_utils.hpp"
 #include <stdexcept>
 #include <algorithm>
 #include <openssl/sha.h>

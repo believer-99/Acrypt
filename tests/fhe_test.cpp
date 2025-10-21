@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include "FHE/FHE_utils.hpp"
 #include "seal/seal.h"
-#include "KeyManager.h"
+#include "KeyManager.hpp"
 
 void assert_fhe_true(bool condition, const std::string &test_name)
 {

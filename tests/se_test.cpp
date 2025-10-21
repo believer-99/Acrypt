@@ -3,9 +3,9 @@
 #include <string>
 #include <algorithm>
 #include <stdexcept>
-#include "SE.h"
-#include "AES.h"
-#include "KeyManager.h"
+#include "SE.hpp"
+#include "AES.hpp"
+#include "KeyManager.hpp"
 
 bool compare_string_vectors_sorted(std::vector<std::string> v1, std::vector<std::string> v2)
 {

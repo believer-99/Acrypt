@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 #include <stdexcept>
-#include "AES.h"
-#include "KeyManager.h"
+#include "AES.hpp"
+#include "KeyManager.hpp"
 
 void print_hex(const std::string &label, const std::vector<uint8_t> &data)
 {
